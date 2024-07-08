@@ -1,6 +1,6 @@
 import React from "react";
 import InfoCard from "@/components/InfoCard/InfoCard";
-import HtmlIcon from "@/app/_assets/icon/html5.svg";
+import Image from "next/image";
 
 const InfoList = () => {
   return (
@@ -57,11 +57,45 @@ const InfoList = () => {
           </div>
         </InfoCard>
         <InfoCard width={700} height={200}>
-          <div className="flex flex-col gap-[15px]">
+          <div className="flex flex-col gap-[30px]">
             <div>
               <p className="text-[30px] font-extrabold">SKILLS ABILITY</p>
             </div>
-            <div>{/* <HtmlIcon /> */}</div>
+            <div className="flex w-full justify-evenly">
+              <Image src="/icon/HTML.png" alt="HTML" width={60} height={60} />
+              <Image src="/icon/CSS.png" alt="CSS" width={60} height={60} />
+              <Image
+                src="/icon/JavaScript.png"
+                alt="JavaScript"
+                width={60}
+                height={60}
+              />
+              <Image
+                src="/icon/TypeScript.png"
+                alt="TypeScript"
+                width={60}
+                height={60}
+              />
+              <Image
+                src="/icon/React-Dark.png"
+                alt="react"
+                width={60}
+                height={60}
+              />
+              <Image
+                src="/icon/TailwindCSS-Dark.png"
+                alt="짜증남"
+                width={60}
+                height={60}
+              />
+
+              <Image
+                src="/icon/NextJS-Dark.png"
+                alt="짜증남"
+                width={60}
+                height={60}
+              />
+            </div>
           </div>
         </InfoCard>
       </div>
