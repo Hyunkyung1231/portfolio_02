@@ -3,6 +3,7 @@ import Link from "next/link";
 import Button from "@/components/Button/Button";
 import TypingEffect from "@/utils/Typing";
 import Image from "next/image";
+import { MdArrowOutward } from "react-icons/md";
 
 const MainPage = () => {
   return (
@@ -22,10 +23,9 @@ const MainPage = () => {
         </div>
         <div className="w-[150px]">
           <Link href={"https://www.notion.so/6c041537fdfe47938fc17b46845979ba"}>
-            <Button className="bg-primary-10 flex rounded-xl shadow-card">
-              <span className="text-[13px]">
-                이력서 보러가기<span className="font-extrabold">↗</span>
-              </span>
+            <Button className="flex gap-[10px] rounded-full bg-black text-white">
+              <span className="text-[13px] font-bold">이력서</span>
+              <MdArrowOutward size={20} />
             </Button>
           </Link>
         </div>
