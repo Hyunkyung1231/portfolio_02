@@ -1,7 +1,12 @@
 import "@/styles/globals.css";
 import Navbar from "@/components/Navbar/Navbar";
+import { ReactNode } from "react";
 
-export default function RootLayout({ children }) {
+interface RootLayoutProps {
+  children: ReactNode;
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="ko" className="no-scrollbar box-border h-full w-full">
       <body className="no-scrollbar relative m-auto box-border flex h-full flex-col items-center bg-primary-20">
