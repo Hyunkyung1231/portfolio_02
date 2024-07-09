@@ -7,7 +7,7 @@ import CopyButton from "@/components/CopyButton/CopyButton";
 const page = () => {
   return (
     <div className="flex h-full w-full flex-col items-center gap-[30px] px-[140px] py-[110px]">
-      <h1 className="text-[50px] font-bold">Contact</h1>
+      <h1 className="text-[50px] font-extrabold">Contact</h1>
       <div className="flex h-full w-full items-center justify-center gap-[100px]">
         <div className="flex h-full flex-col items-center gap-[15px]">
           <div className="h-[150px] w-[150px] overflow-hidden rounded-[23%]">

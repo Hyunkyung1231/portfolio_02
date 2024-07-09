@@ -41,3 +41,14 @@
 .info_box_card:hover {
   transform: perspective(1100px) rotateY(180deg);
 }
+
+/* hover */
+
+.hover_button:hover {
+}
+
+.hover_card:hover {
+}
+
+.hover_text:hover {
+}
