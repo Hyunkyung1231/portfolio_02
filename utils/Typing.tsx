@@ -21,9 +21,7 @@ const TypingEffect: React.FC<TypingEffectProps> = ({ text, speed }) => {
     }
   });
 
-  return (
-    <p className="text-gradiant text-[60px] font-extrabold">{displayedText}</p>
-  );
+  return <p className="">{displayedText}</p>;
 };
 
 export default TypingEffect;

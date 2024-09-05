@@ -9,7 +9,7 @@ const Button = ({ children, className, ...props }: ButtonProps) => {
   return (
     <button
       {...props}
-      className={`flex h-[50px] w-full items-center justify-center border-4 border-black bg-gray-30 text-[50px] ${className}`}
+      className={`hover_button flex h-[50px] w-full items-center justify-center bg-primary-30 text-white ${className}`}
     >
       {children}
     </button>

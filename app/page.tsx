@@ -1,16 +1,24 @@
 import React from "react";
 import "../styles/globals.css";
 import MainPage from "@/components/MainPage/MainPage";
-import InfoList from "@/components/InfoList/InfoList";
-import ProjectList from "@/components/ProjectList/ProjectList";
+import AboutMe from "@/components/AboutMe/AboutMe";
+import SideBar from "@/components/SideBar/Sidebar";
 import Footer from "@/components/Footer/Footer";
+import ProjectPage from "@/components/ProjectPage/ProjectPage";
 
-const Home = () => {
+interface HomeProps {
+  flex: string;
+}
+
+const Home: React.FC<HomeProps> = ({ flex }) => {
   return (
-    <div>
+    <div className="h-full w-full">
       <MainPage />
-      <InfoList />
-      <ProjectList />
+      <div className="absolute left-[120px] top-[200px]">
+        <SideBar flex="flex-col" />
+      </div>
+      <AboutMe />
+      <ProjectPage />
       <Footer />
     </div>
   );

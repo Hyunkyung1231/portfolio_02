@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import { ReactNode } from "react";
+import { pretend } from "./fonts";
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -8,12 +9,15 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="ko" className="no-scrollbar box-border h-full w-full">
-      <body className="no-scrollbar relative m-auto box-border flex h-full flex-col items-center bg-primary-20">
-        <div className="fixed top-0 z-50 w-full">
+    <html
+      lang="ko"
+      className={`${pretend.variable} no-scrollbar box-border h-full w-full bg-red-600`}
+    >
+      <body className="no-scrollbar relative m-auto box-border flex h-full max-w-[1680px] flex-col items-center bg-primary-20">
+        <div className="fixed top-[0px] z-[999] w-full max-w-[1680px]">
           <Navbar />
         </div>
-        <main className="relative top-[8%] w-full">{children}</main>
+        <main className="relative h-full w-full bg-primary-20">{children}</main>
       </body>
     </html>
   );

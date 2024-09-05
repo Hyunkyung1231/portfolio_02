@@ -3,40 +3,55 @@ import Link from "next/link";
 import Button from "@/components/Button/Button";
 import TypingEffect from "@/utils/Typing";
 import Image from "next/image";
-import { MdArrowOutward } from "react-icons/md";
+import { BiSolidChevronRightCircle } from "react-icons/bi";
 
 const MainPage = () => {
   return (
-    <div className="flex w-full items-center px-[140px] py-[110px]">
-      <div className="flex w-full flex-col gap-[20px]">
-        <div className="flex flex-col leading-[75px]">
-          <p className="text-[60px] font-extrabold">안녕하세요. 저는</p>
-          <div className="h-[70px]">
-            <TypingEffect text={"프론트엔드"} speed={100} />
+    <div className="flex w-full flex-col items-center bg-primary-20 px-[300px] py-[200px]">
+      <div className="flex w-full gap-[30px]">
+        <div className="flex w-full flex-col gap-[30px]">
+          <div className="flex flex-col">
+            <p className="text-[40px] font-semibold text-primary-60">
+              Hi! I'm Hyunkyung Lee
+            </p>
+            <div className="h-full text-[20px] font-semibold text-primary-70">
+              <TypingEffect text={"Front-end Developer"} speed={100} />
+            </div>
           </div>
-          <p className="text-[60px] font-extrabold">개발자입니다.</p>
+          <div className="flex flex-col">
+            <p className="text-[18px] text-primary-70">
+              blah blah dslfkjsldkfjlskdjfsdflkjsdflkjdsflk
+            </p>
+            <p className="text-[18px] text-primary-70">
+              blah blah dslfkjsldkfjlskdjfsdflkjsdflkjdsflk
+            </p>
+            <p className="text-[18px] text-primary-70">
+              blah blah dslfkjsldkfjls
+            </p>
+          </div>
+          <div className="w-[150px]">
+            <Link
+              href={"https://www.notion.so/6c041537fdfe47938fc17b46845979ba"}
+            >
+              <Button className="flex gap-[5px] rounded-lg">
+                <span className="text-[15px]">Contact me</span>
+                <BiSolidChevronRightCircle size={20} />
+              </Button>
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col">
-          <p className="text-[20px] font-light">
-            새로운 기술을 학습하고 적용하는 것을 즐기는 개발자 이현경입니다.
-          </p>
-        </div>
-        <div className="w-[150px]">
-          <Link href={"https://www.notion.so/6c041537fdfe47938fc17b46845979ba"}>
-            <Button className="flex gap-[10px] rounded-full bg-black text-white">
-              <span className="text-[13px] font-bold">이력서</span>
-              <MdArrowOutward size={20} />
-            </Button>
-          </Link>
+        <div className="">
+          <Image
+            className="figure"
+            src="/profile.jpeg"
+            alt="프로필이미지"
+            width={500}
+            height={500}
+          />
         </div>
       </div>
-      <div className="relative">
-        <Image
-          src="/배경이미지.png"
-          alt="프로필이미지"
-          width={600}
-          height={600}
-        />
+      <div className="relative bottom-[-120px] flex w-full justify-center">
+        <span className="loader"></span>
       </div>
     </div>
   );
