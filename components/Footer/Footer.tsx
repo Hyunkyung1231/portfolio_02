@@ -16,7 +16,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <SideBar flex="" />
+            <SideBar />
           </div>
         </div>
       </div>

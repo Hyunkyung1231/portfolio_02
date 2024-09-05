@@ -1,13 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
-interface SideBarProps {
-  flex: string;
-}
-
-const SideBar: React.FC<SideBarProps> = ({ flex }) => {
+const SideBar = () => {
   return (
-    <div className={`flex h-full ${flex} justify-around gap-[20px] py-[80px]`}>
+    <div className={`flex h-full flex-col justify-around gap-[20px] py-[80px]`}>
       <div className="h-[30px] w-[30px]">
         <Image
           className="rounded-full"

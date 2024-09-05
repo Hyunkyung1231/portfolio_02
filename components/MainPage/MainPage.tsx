@@ -12,7 +12,7 @@ const MainPage = () => {
         <div className="flex w-full flex-col gap-[30px]">
           <div className="flex flex-col">
             <p className="text-[40px] font-semibold text-primary-60">
-              Hi! I'm Hyunkyung Lee
+              {`Hi! I'm Hyunkyung Lee`}
             </p>
             <div className="h-full text-[20px] font-semibold text-primary-70">
               <TypingEffect text={"Front-end Developer"} speed={100} />
