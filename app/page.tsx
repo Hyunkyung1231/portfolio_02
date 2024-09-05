@@ -6,16 +6,12 @@ import SideBar from "@/components/SideBar/Sidebar";
 import Footer from "@/components/Footer/Footer";
 import ProjectPage from "@/components/ProjectPage/ProjectPage";
 
-interface HomeProps {
-  flex: string;
-}
-
-const Home: React.FC<HomeProps> = ({ flex }) => {
+const Home = () => {
   return (
     <div className="h-full w-full">
       <MainPage />
       <div className="absolute left-[120px] top-[200px]">
-        <SideBar flex="flex-col" />
+        <SideBar />
       </div>
       <AboutMe />
       <ProjectPage />
