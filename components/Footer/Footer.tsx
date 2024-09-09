@@ -15,7 +15,7 @@ const Footer = () => {
               Front-end Developer
             </div>
           </div>
-          <div>
+          <div className="flex h-full justify-around gap-[20px] py-[80px]">
             <SideBar />
           </div>
         </div>

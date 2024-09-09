@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const SideBar = () => {
   return (
-    <div className={`flex h-full flex-col justify-around gap-[20px] py-[80px]`}>
+    <>
       <div className="h-[30px] w-[30px]">
         <Image
           className="rounded-full"
@@ -31,7 +31,7 @@ const SideBar = () => {
           height={500}
         />
       </div>
-    </div>
+    </>
   );
 };
 
