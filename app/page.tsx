@@ -11,7 +11,9 @@ const Home = () => {
     <div className="h-full w-full">
       <MainPage />
       <div className="absolute left-[120px] top-[200px]">
-        <SideBar />
+        <div className="flex h-full flex-col justify-around gap-[20px] py-[80px]">
+          <SideBar />
+        </div>
       </div>
       <AboutMe />
       <ProjectPage />
