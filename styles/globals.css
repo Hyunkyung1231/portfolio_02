@@ -106,3 +106,7 @@
     transform: translate(-50%, -5px);
   }
 }
+
+.pageActive {
+  background-color: #5d52b8;
+}
