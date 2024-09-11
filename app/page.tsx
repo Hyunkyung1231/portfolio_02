@@ -5,6 +5,7 @@ import AboutMe from "@/components/AboutMe/AboutMe";
 import SideBar from "@/components/SideBar/Sidebar";
 import Footer from "@/components/Footer/Footer";
 import ProjectPage from "@/components/ProjectPage/ProjectPage";
+import ContactPage from "@/components/ContactPage/ContactPage";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       </div>
       <AboutMe />
       <ProjectPage />
+      <ContactPage />
       <Footer />
     </div>
   );
