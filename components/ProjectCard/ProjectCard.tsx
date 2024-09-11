@@ -1,64 +1,131 @@
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import { MdArrowOutward } from "react-icons/md";
+import Button from "@/components/Button/Button";
+import { BiSolidChevronRightCircle } from "react-icons/bi";
+import { BiSolidChevronLeft } from "react-icons/bi";
+import { BiSolidChevronRight } from "react-icons/bi";
+import { FiExternalLink } from "react-icons/fi";
+import { PROJECT_DATA } from "./data";
+import { FiXCircle } from "react-icons/fi";
+import ProjectModal from "../ProjectModal/ProjectModal";
 
 const ProjectCard = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const [counter, setCounter] = useState(0);
+
+  const handleLeftClick = () => {
+    if (counter > 0) {
+      setCounter(counter - 1);
+    }
+  };
+
+  const handleRightClick = () => {
+    if (counter < PROJECT_DATA.length - 1) {
+      setCounter(counter + 1);
+    }
+  };
+
   return (
-    <div className="flex w-full justify-around">
-      <div className="info_box_card">
-        <div className="h-[420px] w-[400px] overflow-hidden rounded-2xl border-2 border-black bg-primary-10 shadow-card">
-          <div className="relative h-[230px] w-[400px] overflow-hidden">
-            <Image src="/매치포인트.png" fill={true} alt="프로젝트 이미지" />
-          </div>
-          <div className="flex h-[190px] flex-col justify-center gap-[2px] pl-[20px]">
-            <p className="text-[20px] font-semibold">매치포인트</p>
-            <div className="flex items-center gap-[10px]">
-              <div className="h-2 w-2 rounded-full bg-black"></div>
-              <p className="text-[15px] font-normal">프론트엔드</p>
-            </div>
-            <p className="text-[15px] font-normal text-slate-600">
-              2024.05.24 - 2024.06.21
-            </p>
-          </div>
+    <div className="flex h-full w-full flex-col justify-center">
+      <div className="flex h-[300px] w-full justify-center">
+        <div
+          className="flex h-full items-center justify-center text-primary-30"
+          onClick={handleLeftClick}
+        >
+          <BiSolidChevronLeft size={40} />
         </div>
-        <div className="info_box_card back h-[420px] w-[400px] overflow-hidden rounded-2xl border-2 border-black bg-primary-10 shadow-card">
-          <div className="flex items-center justify-center text-center">
-            <Link href="https://www.match-point.co.kr/">
-              <p className="text-[20px] font-extrabold">프로젝트 페이지</p>
-              <div className="flex items-center justify-center gap-[4px]">
-                <p className="text-[20px] font-extrabold">방문하기</p>
-                <MdArrowOutward size={20} />
+        <div className="flex w-[850px] overflow-hidden">
+          {PROJECT_DATA &&
+            PROJECT_DATA.map((project) => (
+              <div
+                key={project.id}
+                className="flex w-full items-center justify-center gap-[70px] px-[60px] transition-all duration-500 ease-in-out"
+                style={{
+                  transform: `translateX(-${850 * counter}px)`,
+                }}
+              >
+                <div className="flex h-[80%] w-[420px] items-center overflow-hidden rounded-lg">
+                  <Image
+                    className="h-full w-[420px]"
+                    src={project.imageUrl}
+                    alt={project.name}
+                    width={500}
+                    height={500}
+                  />
+                </div>
+
+                <div className="flex h-full w-[340px] flex-col justify-center gap-[20px]">
+                  <p className="h-[30px] text-[25px] font-bold text-primary-60">
+                    {project.name}
+                  </p>
+                  <p className="h-[80px] text-primary-70">
+                    {project.description}
+                  </p>
+                  <div className="flex w-full flex-row gap-[10px]">
+                    <div className="w-[150px]">
+                      <Link href={project.url}>
+                        <Button className="flex gap-[5px] rounded-lg">
+                          <span className="text-[15px]">Visit Site</span>
+                          <FiExternalLink size={20} />
+                        </Button>
+                      </Link>
+                    </div>
+                    {isOpen ? (
+                      <div
+                        className="w-[150px]"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <Button className="flex gap-[5px] rounded-lg">
+                          <span className="text-[15px]">close</span>
+                          <FiXCircle size={20} />
+                        </Button>
+                      </div>
+                    ) : (
+                      <div
+                        className="w-[150px]"
+                        onClick={() => setIsOpen(true)}
+                      >
+                        <Button className="flex gap-[5px] rounded-lg">
+                          <span className="text-[15px]">View more</span>
+                          <BiSolidChevronRightCircle size={20} />
+                        </Button>
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
-            </Link>
-          </div>
+            ))}
+        </div>
+        <div
+          className="flex h-full items-center justify-center text-primary-30"
+          onClick={handleRightClick}
+        >
+          <BiSolidChevronRight size={40} />
         </div>
       </div>
-      <div className="info_box_card">
-        <div className="h-[420px] w-[400px] overflow-hidden rounded-2xl border-2 border-black bg-primary-10 shadow-card">
-          <div className="relative h-[230px] w-[400px] overflow-hidden">
-            <Image src="/북스포일러.png" fill={true} alt="프로젝트 이미지" />
-          </div>
-          <div className="flex h-[190px] flex-col justify-center gap-[2px] pl-[20px]">
-            <p className="text-[20px] font-semibold">북스포일러</p>
-            <div className="flex items-center gap-[10px]">
-              <div className="h-2 w-2 rounded-full bg-black"></div>
-              <p className="text-[15px] font-normal">프론트엔드</p>
-            </div>
-            <p className="text-[15px] font-normal text-slate-600">
-              2024.04.24 - 2024.05.23
-            </p>
-          </div>
-        </div>
-        <div className="info_box_card back h-[420px] w-[400px] overflow-hidden rounded-2xl border-2 border-black bg-primary-10 shadow-card">
-          <div className="flex items-center justify-center text-center">
-            <Link href="https://oz-02-collabo-004.vercel.app/">
-              <p className="text-[20px] font-extrabold">프로젝트 페이지</p>
-              <div className="flex items-center justify-center gap-[4px]">
-                <p className="text-[20px] font-extrabold">방문하기</p>
-                <MdArrowOutward size={20} />
-              </div>
-            </Link>
+      <div className="flex w-full justify-center gap-[10px] pb-[40px] pt-[20px]">
+        {PROJECT_DATA &&
+          PROJECT_DATA.map((project) => (
+            <div
+              key={project.id}
+              className={`h-[9px] w-[9px] rounded-full bg-primary-70 ${
+                project.id === counter + 1 ? "pageActive" : ""
+              }`}
+            ></div>
+          ))}
+      </div>
+      <div className="flex h-full w-full justify-center">
+        <div className="flex w-[850px] overflow-hidden">
+          <div
+            className="flex w-full items-center justify-center transition-all duration-500 ease-in-out"
+            style={{
+              transform: `translateX(-${850 * counter}px)`,
+            }}
+          >
+            {isOpen && <ProjectModal />}
           </div>
         </div>
       </div>

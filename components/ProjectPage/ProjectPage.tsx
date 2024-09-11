@@ -1,7 +1,5 @@
 import React from "react";
-import EducationCard from "../EducationCard/EducationCard";
-import ExperienceCard from "../ExperienceCard/ExperienceCard";
-import SkillsCard from "../SkillsCard/SkillsCard";
+import ProjectCard from "../ProjectCard/ProjectCard";
 
 const ProjectPage = () => {
   return (
@@ -13,15 +11,7 @@ const ProjectPage = () => {
         </p>
       </div>
       <div className="flex w-full justify-center gap-[20px]">
-        <div className="flex h-[350px] w-[280px] items-start justify-start gap-[10px] rounded-sm bg-primary-10 px-[25px] pt-[20px] shadow-card">
-          <ExperienceCard />
-        </div>
-        <div className="flex h-[350px] w-[280px] items-start justify-start gap-[10px] rounded-sm bg-primary-10 px-[25px] pt-[20px] shadow-card">
-          <EducationCard />
-        </div>
-        <div className="flex h-[350px] w-[280px] items-start justify-start gap-[10px] rounded-sm bg-primary-10 px-[25px] pt-[20px] shadow-card">
-          <SkillsCard />
-        </div>
+        <ProjectCard />
       </div>
     </div>
   );
