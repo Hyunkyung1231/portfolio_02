@@ -13,7 +13,7 @@ const Home = () => {
       <MainPage />
       <div className="absolute left-[120px] top-[200px]">
         <div className="flex h-full flex-col justify-around gap-[20px] py-[80px]">
-          <SideBar />
+          <SideBar location="app" />
         </div>
       </div>
       <AboutMe />
