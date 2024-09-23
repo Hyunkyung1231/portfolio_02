@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex w-full flex-row items-center justify-between">
           <div className="flex flex-col">
             <div className="text-[30px] font-extrabold text-primary-10">
-              이~~현경
+              이현경
             </div>
             <div className="text-[18px] text-primary-10">
               Front-end Developer
