@@ -30,6 +30,10 @@
   color: #fdfbff;
 }
 
+.hover_navbar:hover {
+  color: #5d52b8;
+}
+
 .hover_footer_sidebar:hover {
   background-color: transparent;
   border: 2px solid #ffffff;
