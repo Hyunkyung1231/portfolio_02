@@ -17,35 +17,6 @@
   border-radius: 30% 70% 70% 30% / 58% 80% 20% 42%;
 }
 
-.text-gradiant {
-  background: linear-gradient(90deg, #5d52b8 10%, #0ea5e9 30%, #10b981 90%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-/* 카드 뒤집기 */
-.info_box_card {
-  display: inline-grid;
-  transition: transform 0.5s ease-in-out;
-  transform: perspective(1100px) rotateY(0deg);
-  transform-style: preserve-3d;
-}
-
-.info_box_card > * {
-  grid-area: 1 / 1 / 1 / 1;
-  backface-visibility: hidden;
-  margin: 2.5;
-}
-
-.back {
-  transform: rotateY(180deg);
-}
-
-.info_box_card:hover {
-  transform: perspective(1100px) rotateY(180deg);
-}
-
 /* hover */
 
 .hover_button:hover {
@@ -54,12 +25,25 @@
   border: 1.5px solid #5d52b8;
 }
 
-.hover_card:hover {
-}
-
 .hover_text:hover {
   background-color: #5d52b8;
   color: #fdfbff;
+}
+
+.hover_navbar:hover {
+  color: #5d52b8;
+}
+
+.hover_footer_sidebar:hover {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.hover_app_sidebar:hover {
+  background-color: transparent;
+  border: 2px solid #5d52b8;
+  color: #5d52b8;
 }
 
 /* 스크롤애니메이션 */

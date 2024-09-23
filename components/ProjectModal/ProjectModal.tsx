@@ -29,9 +29,15 @@ const ProjectModal = () => {
                     </p>
                   </div>
                   <div className="">
-                    <p className="text-[14px] font-normal text-primary-60">
-                      {project.skiis}
-                    </p>
+                    {project.skiis?.map((skills, idx) => {
+                      return (
+                        <div key={idx}>
+                          <p className="text-[14px] font-normal text-primary-60">
+                            {`- ${skills}`}
+                          </p>
+                        </div>
+                      );
+                    })}{" "}
                   </div>
                 </div>
               </div>

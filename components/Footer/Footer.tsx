@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import SideBar from "../SideBar/Sidebar";
 
 const Footer = () => {
@@ -9,14 +8,14 @@ const Footer = () => {
         <div className="flex w-full flex-row items-center justify-between">
           <div className="flex flex-col">
             <div className="text-[30px] font-extrabold text-primary-10">
-              이~~현경
+              이현경
             </div>
             <div className="text-[18px] text-primary-10">
               Front-end Developer
             </div>
           </div>
           <div className="flex h-full justify-around gap-[20px] py-[80px]">
-            <SideBar />
+            <SideBar location="footer" />
           </div>
         </div>
       </div>
